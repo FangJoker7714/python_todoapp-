@@ -4,9 +4,32 @@ import tkinter
 
 #画面表示
 root = tkinter.Tk()
-root.title("todo list")
+
+#ウィンドウの名前を設定
+root.title("todo_app")
+
+#ウィンドウの大きさを設定
 root.geometry("400x400")
 
+#背景画像
+
+#ファイルを参照
+back = tkinter.PhotoImage(file="back.png")
+
+#画像の大きさを調整
+canvas = tkinter.Canvas(bg="black", width=400, height=400)
+
+#画像の位置を設定
+canvas.place(x=0, y=0)
+
+#画像を表示する
+canvas.create_image(0, 0, image=back, anchor=tkinter.NW)
+
+#タイトル
+static = tkinter.Label(root,text="Lets programming your life")
+static.place(x=120, y=10)
+
+#ボタンに機能をつける関数
 def check(event):
     global Val1
     global Val2
@@ -55,17 +78,7 @@ def check(event):
 
     tkMessageBox.showinfo('info',text)
 
-#タイトル
-back = tkinter.PhotoImage(file="back.png")
-canvas = tkinter.Canvas(bg="black", width=400, height=400)
-canvas.place(x=0, y=0)
-canvas.create_image(0, 0, image=back, anchor=tkinter.NW)
-
-static = tkinter.Label(root,text="Lets programming your life")
-static.place(x=120, y=10)
-
-
-#チェックボックス群
+#チェックボックス
 Val1 = tkinter.BooleanVar()
 Val2 = tkinter.BooleanVar()
 Val3 = tkinter.BooleanVar()
@@ -95,36 +108,32 @@ CheckBox6.place(x=0, y=250)
 CheckBox7 = tkinter.Checkbutton(variable=Val7)
 CheckBox7.place(x=0, y=290)
 
+#項目入力欄群
+EditBox1 = tkinter.Entry(width=50)
+EditBox1.place(x=50, y=50)
+
+EditBox2 = tkinter.Entry(width=50)
+EditBox2.place(x=50, y=90)
+
+EditBox3 = tkinter.Entry(width=50)
+EditBox3.place(x=50, y=130)
+
+EditBox4 = tkinter.Entry(width=50)
+EditBox4.place(x=50, y=170)
+
+EditBox5 = tkinter.Entry(width=50)
+EditBox5.place(x=50, y=210)
+
+EditBox6 = tkinter.Entry(width=50)
+EditBox6.place(x=50, y=250)
+
+EditBox7 = tkinter.Entry(width=50)
+EditBox7.place(x=50, y=290)
+
+#ボタン
 button1 = tkinter.Button(root, text=u'check',width=30)
 button1.bind("<Button-1>",check)
 button1.place(x=180, y=350)
 
-#項目入力欄群
-EditBox1 = tkinter.Entry(width=50)
-EditBox1.insert(tkinter.END,"")
-EditBox1.place(x=50, y=50)
-
-EditBox2 = tkinter.Entry(width=50)
-EditBox2.insert(tkinter.END,"")
-EditBox2.place(x=50, y=90)
-
-EditBox3 = tkinter.Entry(width=50)
-EditBox3.insert(tkinter.END,"")
-EditBox3.place(x=50, y=130)
-
-EditBox4 = tkinter.Entry(width=50)
-EditBox4.insert(tkinter.END,"")
-EditBox4.place(x=50, y=170)
-
-EditBox5 = tkinter.Entry(width=50)
-EditBox5.insert(tkinter.END,"")
-EditBox5.place(x=50, y=210)
-
-EditBox6 = tkinter.Entry(width=50)
-EditBox6.insert(tkinter.END,"")
-EditBox6.place(x=50, y=250)
-
-EditBox7 = tkinter.Entry(width=50)
-EditBox7.insert(tkinter.END,"")
-EditBox7.place(x=50, y=290)
+#文章で言うところの句読点みたいなものなので忘れずに。
 root.mainloop()
