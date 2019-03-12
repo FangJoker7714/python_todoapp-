@@ -1,4 +1,3 @@
-# -*- coding: utf8 -*-
 from tkinter import messagebox as tkMessageBox
 import sys
 import tkinter
@@ -20,37 +19,37 @@ def check(event):
     text=""
 
     if Val1.get() == True:
-        text += ""
+        text += "1 is OK!"
     else:
         text += "You forget checking 1."
 
     if Val1.get() == True:
-        text += ""
+        text += "2 is OK!"
     else:
         text += "You forget checking 2."
 
     if Val1.get() == True:
-        text += ""
+        text += "3 is OK!"
     else:
         text += "You forget checking 3."
 
     if Val1.get() == True:
-        text += ""
+        text += "4 is OK!"
     else:
         text += "You forget checking 4."
 
     if Val1.get() == True:
-        text += ""
+        text += "5 is OK!"
     else:
         text += "You forget checking 5."
 
     if Val1.get() == True:
-        text += ""
+        text += "6 is OK!"
     else:
         text += "You forget checking 6."
 
     if Val1.get() == True:
-        text += ""
+        text += "7 is OK!"
     else:
         text += "You forget checking 7."
 
