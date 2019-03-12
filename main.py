@@ -19,39 +19,39 @@ def check(event):
     text=""
 
     if Val1.get() == True:
-        text += "1 is OK!"
+        text += "1 is OK!\n"
     else:
-        text += "You forget checking 1."
+        text += "You forgot checking 1.\n"
 
-    if Val1.get() == True:
-        text += "2 is OK!"
+    if Val2.get() == True:
+        text += "2 is OK!\n"
     else:
-        text += "You forget checking 2."
+        text += "You forgot checking 2.\n"
 
-    if Val1.get() == True:
-        text += "3 is OK!"
+    if Val3.get() == True:
+        text += "3 is OK!\n"
     else:
-        text += "You forget checking 3."
+        text += "You forgot checking 3.\n"
 
-    if Val1.get() == True:
-        text += "4 is OK!"
+    if Val4.get() == True:
+        text += "4 is OK!\n"
     else:
-        text += "You forget checking 4."
+        text += "You forgot checking 4.\n"
 
-    if Val1.get() == True:
-        text += "5 is OK!"
+    if Val5.get() == True:
+        text += "5 is OK!\n"
     else:
-        text += "You forget checking 5."
+        text += "You forgot checking 5.\n"
 
-    if Val1.get() == True:
-        text += "6 is OK!"
+    if Val6.get() == True:
+        text += "6 is OK!\n"
     else:
-        text += "You forget checking 6."
+        text += "You forgot checking 6.\n"
 
-    if Val1.get() == True:
-        text += "7 is OK!"
+    if Val7.get() == True:
+        text += "7 is OK!\n"
     else:
-        text += "You forget checking 7."
+        text += "You forgot checking 7.\n"
 
     tkMessageBox.showinfo('info',text)
 
@@ -74,25 +74,25 @@ Val5 = tkinter.BooleanVar()
 Val6 = tkinter.BooleanVar()
 Val7 = tkinter.BooleanVar()
 
-CheckBox1 = tkinter.Checkbutton()
+CheckBox1 = tkinter.Checkbutton(variable=Val1)
 CheckBox1.place(x=0, y=50)
 
-CheckBox2 = tkinter.Checkbutton()
+CheckBox2 = tkinter.Checkbutton(variable=Val2)
 CheckBox2.place(x=0, y=90)
 
-CheckBox3 = tkinter.Checkbutton()
+CheckBox3 = tkinter.Checkbutton(variable=Val3)
 CheckBox3.place(x=0, y=130)
 
-CheckBox4 = tkinter.Checkbutton()
+CheckBox4 = tkinter.Checkbutton(variable=Val4)
 CheckBox4.place(x=0, y=170)
 
-CheckBox5 = tkinter.Checkbutton()
+CheckBox5 = tkinter.Checkbutton(variable=Val5)
 CheckBox5.place(x=0, y=210)
 
-CheckBox6 = tkinter.Checkbutton()
+CheckBox6 = tkinter.Checkbutton(variable=Val6)
 CheckBox6.place(x=0, y=250)
 
-CheckBox7 = tkinter.Checkbutton()
+CheckBox7 = tkinter.Checkbutton(variable=Val7)
 CheckBox7.place(x=0, y=290)
 
 button1 = tkinter.Button(root, text=u'check',width=30)
